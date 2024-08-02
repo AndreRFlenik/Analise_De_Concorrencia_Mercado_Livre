@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Produto</title>
+    <style>
+        table.data {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table.data, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Insira os dados do Produto</h1>
+    <form action="/submit" method="post">
+        <label for="produto_nome">Nome do Produto:</label>
+        <input type="text" id="produto_nome" name="produto_nome"><br><br>
+        
+        <label for="produto_preco">Preço Estimado:</label>
+        <input type="text" id="produto_preco" name="produto_preco"><br><br>
+        
+        <label for="produto_full">É Full:</label>
+        <input type="text" id="produto_full" name="produto_full"><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+
+    {% if resultado1 or resultado2 or resultado3 or resultado4 or resultado5 %}
+        <h2>Resultado:</h2>
+        <ul>
+	    {% if resultado12 %}<li>{{ resultado12 }}</li>{% endif %}
+            {% if resultado1 %}<li>{{ resultado1 }}</li>{% endif %}
+            {% if resultado2 %}<li>{{ resultado2 }}</li>{% endif %}
+            {% if resultado3 %}<li>{{ resultado3 }}</li>{% endif %}
+            {% if resultado4 %}<li>{{ resultado4 }}</li>{% endif %}
+            {% if resultado5 %}<li>{{ resultado5 }}</li>{% endif %}
+            {% if resultado6 %}<li>{{ resultado6 | safe }}</li>{% endif %}
+            {% if resultado7 %}<li>{{ resultado7 | safe }}</li>{% endif %}
+	    {% if resultado8 %}<li>{{ resultado8 }}</li>{% endif %}
+            {% if resultado9 %}<li>{{ resultado9 }}</li>{% endif %}
+	    {% if resultado10 %}<li>{{ resultado10 }}</li>{% endif %}
+	    {% if resultado11 %}<li>{{ resultado11 }}</li>{% endif %}
+        </ul>
+    {% endif %}
+</body>
+</html>
+
+
